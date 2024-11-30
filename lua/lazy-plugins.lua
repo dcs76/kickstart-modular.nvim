@@ -35,8 +35,6 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/tokyonight',
-
   require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
@@ -51,9 +49,15 @@ require('lazy').setup({
 
   require 'custom/plugins/testing',
 
-  require 'custom/plugins/colorschemes/lackluster',
+  require 'custom/plugins/colorizer',
+
+  -- color schemes
+  -- require 'custom/plugins/colorschemes/lackluster',
+  -- require 'kickstart/plugins/tokyonight',
 
   require 'custom/plugins/colorschemes/kanagawa',
+
+  -- require 'custom/plugins/colorschemes/rose-pine',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and

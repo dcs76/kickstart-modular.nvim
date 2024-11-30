@@ -31,8 +31,28 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- mappings for the graphite layout.
+-- vim.keymap.set('n', 'y', 'h')
+-- vim.keymap.set('n', 'h', 'j')
+-- vim.keymap.set('n', 'a', 'k')
+-- vim.keymap.set('n', 'e', 'l')
 -- go back to normal mode by pressing j twice.
 vim.keymap.set('i', 'jj', '<Esc>')
+
+-- accept autocomplete sugguestions by hitting Enter instead of C-y
+vim.keymap.set('c', '<cr>', function()
+  if vim.fn.pumvisible() == 1 then
+    return '<c-y>'
+  end
+  return '<cr>'
+end, { expr = true })
+
+vim.keymap.set('i', '<cr>', function()
+  if vim.fn.pumvisible() == 1 then
+    return '<c-y>'
+  end
+  return '<cr>'
+end, { expr = true })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
