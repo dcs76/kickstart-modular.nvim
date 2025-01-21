@@ -93,6 +93,10 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- The next two lines add a vertical column at column 120 and sets it to a shade of gray
+vim.opt.colorcolumn = '120'
+vim.cmd "highlight ColorColumn ctermbg=darkgray guibg='#3E444A'"
+
 -- [[ Setting options ]]
 require 'options'
 
